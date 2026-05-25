@@ -107,18 +107,40 @@ void sweepRadar() {
     currentAngle = angle;
 
     // Update OLED
-    display.clearDisplay();
-    display.setCursor(0, 0);
-    display.print("Angle: ");
-    display.println(angle);
+  display.clearDisplay();
+  display.setTextColor(WHITE);
+
+  // Title
+  display.setTextSize(1);
+  display.setCursor(0, 0);
+  display.println("ESP32 RADAR");
+  display.drawLine(0, 10, 127, 10, WHITE);
+
+  // Angle
+  display.setCursor(0, 16);
+  display.print("Angle: ");
+  display.print(angle);
+  display.println(" deg");
+
+  // Distance / status
+  display.setCursor(0, 28);
+  if (currentDistance == -1 || currentDistance > 400) {
+    display.println("Status: CLEAR");
+    display.setCursor(0, 42);
+    display.println("Dist: -- cm");
+  } else {
+    display.println("Status: DETECTED");
+    display.setCursor(0, 42);
     display.print("Dist: ");
-    if (currentDistance == -1) {
-      display.println("No object");
-    } else {
-      display.print(currentDistance);
-      display.println(" cm");
-    }
-    display.display();
+    display.print(currentDistance, 1);
+    display.println(" cm");
+  }
+  
+  // Bottom note
+  display.setCursor(0, 56);
+  display.println("WiFi dashboard active");
+
+  display.display();
   }
 }
 
