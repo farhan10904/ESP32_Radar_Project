@@ -21,15 +21,15 @@ The servo sweeps the ultrasonic sensor through 180 degrees. At each angle, the E
 
 ### Web Dashboard
 
-_Add dashboard screenshot here._
+![ESP32 radar web dashboard](docs/images/dashboard.png)
 
 ### Wokwi Circuit
 
-_Add Wokwi wiring screenshot here._
+![Wokwi circuit wiring layout](docs/images/wokwi-circuit.png)
 
 ### OLED Display
 
-_Add OLED screenshot here._
+![OLED display showing radar data](docs/images/oled-display.png)
 
 ## Features
 
