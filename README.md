@@ -185,4 +185,7 @@ const char* password = "YOUR_WIFI_PASSWORD";
 
 ## Author
 
-Farhan Ali — Engineer GitHub | Portfolio | LinkedIn
+**Farhan Ali** — Engineering Student / Embedded Systems Project  
+[GitHub](https://github.com/farhan10904) | [Portfolio](https://pacific-attention-6cd.notion.site/Farhan-Ali-Engineering-Portfolio-2c0495dbdc658028a0decf9447459ea6#367495dbdc65808eb791f741fc051231) | [LinkedIn](https://www.linkedin.com/in/farhan-ali-95047a245/)
+
+Built as an independent portfolio project to practise ESP32 development, sensor integration, servo control, power setup, and live dashboard creation.
