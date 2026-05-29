@@ -4,9 +4,9 @@
 #include <WiFi.h>
 #include <WebServer.h>
 
-// WiFi
-const char* ssid = "Wokwi-GUEST";
-const char* password = "";
+// WiFi details - replace these before uploading to your ESP32
+const char* ssid = "YOUR_WIFI_NAME";
+const char* password = "YOUR_WIFI_PASSWORD";
 
 // Pin definitions
 #define TRIG_PIN 5
@@ -50,12 +50,16 @@ void setup() {
   display.display();
 
   // WiFi
-  WiFi.begin(ssid, password, 6);
+  WiFi.begin(ssid, password);
   display.println("Connecting WiFi...");
   display.display();
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
-  }
+    Serial.print(".");
+}
+  Serial.println();
+  Serial.print("Connected! IP address: ");
+  Serial.println(WiFi.localIP());
 
   // Show IP on OLED
   display.clearDisplay();
@@ -63,6 +67,7 @@ void setup() {
   display.println("Connected!");
   display.println(WiFi.localIP());
   display.display();
+  delay(5000);
 
   // Web server routes
   server.on("/", handleRoot);
@@ -70,6 +75,7 @@ void setup() {
   server.on("/favicon.ico", []() {
   server.send(204);
 });
+
   server.begin();
 }
 
@@ -297,7 +303,7 @@ void handleRoot() {
         </div>
 
         <div class="small">
-          Range scale: 0-400 cm<br>
+          Range scale: 0-100 cm<br>
           Update rate: 20 Hz target<br>
           Data source: ESP32 /data endpoint
         </div>
@@ -312,7 +318,7 @@ void handleRoot() {
   const cx = 350;
   const cy = 360;
   const radius = 300;
-  const maxDistance = 400;
+  const maxDistance = 100;
 
   let points = [];
 
@@ -331,7 +337,7 @@ void handleRoot() {
 
       ctx.fillStyle = 'rgba(0, 255, 80, 0.65)';
       ctx.font = '12px Arial';
-      ctx.fillText((i + 1) * 100 + ' cm', cx + radius * r - 38, cy - 8);
+      ctx.fillText((i + 1) * 25 + ' cm', cx + radius * r - 38, cy - 8);
     });
 
     // Angle lines and labels
