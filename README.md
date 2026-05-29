@@ -182,3 +182,7 @@ The measured angle and distance are sent to the browser dashboard through a `/da
 const char* ssid = "YOUR_WIFI_NAME";
 const char* password = "YOUR_WIFI_PASSWORD";
 ```
+
+## Author
+
+Farhan Ali — Engineer GitHub | Portfolio | LinkedIn
