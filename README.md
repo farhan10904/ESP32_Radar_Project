@@ -192,4 +192,6 @@ Built as an independent portfolio project to practise ESP32 development, sensor 
 
 ## Acknowledgements
 
-Developed with AI assistance (Claude by Anthropic and ChatGPT by OpenAi) as part of a self-directed engineering project. All hardware decisions, tuning, and design choices were made collaboratively and are fully understood by the author.
+Developed with support from Claude by Anthropic and ChatGPT by OpenAI as part of a self-directed engineering project.
+
+AI tools were used for planning support, debugging help, code review, and documentation improvements. The hardware choices, wiring, PID tuning, dashboard layout, and final project direction were decided, reviewed, and understood by the author.
