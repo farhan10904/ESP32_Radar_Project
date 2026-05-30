@@ -139,6 +139,8 @@ The video shows the servo sweeping the ultrasonic sensor while the OLED and WiFi
 
 [Watch the demo video](docs/media/radar-demo-v1.mp4)
 
+[Watch the full demo on YouTube](https://youtube.com/shorts/mmM5P-PULIE?feature=share)
+
 ## Problems Faced and Fixes
 
 | Problem                                                   | Fix                                                    |
